@@ -158,10 +158,8 @@ void setup() {
   }
 
   Serial.println("local ip");
-  Serial.println(WiFi.localIP());
-//  client.setServer(mqtt_server, 12025);
-  const uint16_t mqtt_port_x = 12025; 
-  client.setServer(mqtt_server, mqtt_port_x);
+  Serial.println(WiFi.localIP()); 
+  client.setServer(mqtt_server, atoi(mqtt_port));
 }
 
 
